@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 require("config.lazy")
 require("plugins.catppuccin")
 require("plugins.treesitter")
+require("plugins.markdown")
 local tsConfig = require("nvim-treesitter.configs")
 tsConfig.setup({
 	ensure_installed = {"lua","c","cpp","markdown","javascript","python"},
