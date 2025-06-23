@@ -24,7 +24,9 @@ vim.o.smartindent = true      -- Smart autoindent for C-like languages
 vim.o.autoindent = true       -- Copy indent from current line when starting new one
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.api.nvim_create_autocmd("InsertLeave", { command = [[set norelativenumber]] })
+vim.api.nvim_create_autocmd("InsertEnter", { command = [[set relativenumber]] })
+
 local hooks = require "ibl.hooks"
 -- create the highlight groups in the highlight setup hook, so they are reset
 -- every time the colorscheme changes
