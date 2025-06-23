@@ -22,7 +22,9 @@ vim.o.softtabstop = 4         -- Number of spaces when pressing Tab in insert mo
 vim.o.tabstop = 4             -- Number of spaces that a <Tab> in the file counts for
 vim.o.smartindent = true      -- Smart autoindent for C-like languages
 vim.o.autoindent = true       -- Copy indent from current line when starting new one
-
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "number"
 local hooks = require "ibl.hooks"
 -- create the highlight groups in the highlight setup hook, so they are reset
 -- every time the colorscheme changes
